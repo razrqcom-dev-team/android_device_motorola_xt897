@@ -75,10 +75,4 @@
         <item>0</item>
     </integer-array>
 
-    <!-- Workaround for devices with broken keyboards -->
-    <bool name="config_forceDisableHardwareKeyboard">false</bool>
-
-    <!-- Enables swipe versus poly-finger touch disambiguation in the KeyboardView -->
-    <bool name="config_swipeDisambiguation">true</bool>
-
 </resources>
