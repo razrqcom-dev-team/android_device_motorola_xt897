@@ -13,7 +13,7 @@ PRODUCT_LOCALES := en_US de_DE zh_CN zh_TW cs_CZ nl_BE nl_NL en_AU en_GB en_CA e
 # phone
 
 
-$(call inherit-product, device/motorola/xt897c/full_xt897.mk)
+$(call inherit-product, device/motorola/xt897/full_xt897.mk)
 
 # phone
 $(call inherit-product, vendor/carbon/config/common_phone.mk)
