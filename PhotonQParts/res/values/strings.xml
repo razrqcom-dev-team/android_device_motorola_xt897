@@ -20,5 +20,6 @@
     <string name="keypad_asanti_qwertz_label">Asanti QWERTZ</string>
     <string name="keypad_asanti_czech_qwerty_label">Asanti Czech QWERTY</string>
     <string name="keypad_asanti_czech_qwertz_label">Asanti Czech QWERTZ</string>
+<string name="keypad_asanti_qwertz_caps_to_shift_label">Asanti QWERTZ capslock to shift</string>
 
 </resources>
