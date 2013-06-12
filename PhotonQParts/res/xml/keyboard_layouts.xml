@@ -15,4 +15,7 @@
     <keyboard-layout android:name="keypad_asanti_czech_qwertz"
             android:label="@string/keypad_asanti_czech_qwertz_label"
             android:keyboardLayout="@raw/keypad_asanti_czech_qwertz" />
+    <keyboard-layout android:name="keypad_asanti_qwertz_caps_to_shift"
+            android:label="@string/keypad_asanti_qwertz_caps_to_shift_label"
+            android:keyboardLayout="@raw/keypad_asanti_qwertz_caps_to_shift" />
 </keyboard-layouts>
