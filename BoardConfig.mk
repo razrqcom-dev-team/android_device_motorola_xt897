@@ -1,3 +1,26 @@
+#
+# Copyright (C) 2013 The CyanogenMod Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+#
+# This file sets variables that control the way modules are built
+# thorughout the system. It should not be used to conditionally
+# disable makefiles (the proper mechanism to control what gets
+# included in a build is to use PRODUCT_PACKAGES in a product
+# definition file).
+#
+
 # inherit from platform common
 -include device/motorola/msm8960-common/BoardConfigCommon.mk
 
@@ -12,21 +35,8 @@ TARGET_USES_MOTOROLA_MSM8960_XT897_LIBLIGHT := true
 # NFC
 BOARD_HAVE_NFC := true
 
-# Inline kernel building
-TARGET_KERNEL_SOURCE := kernel/motorola/msm8960-common
-TARGET_KERNEL_CONFIG := msm8960_mmi_defconfig
-
-# copy all kernel modules under the "kernel/modules" directory to system/lib/modules
-PRODUCT_COPY_FILES += $(shell \
-    find $(LOCAL_PATH)/kernel/modules -name '*.ko' 2> /dev/null \
-    | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
-    | tr '\n' ' ')
-
-BOARD_KERNEL_CMDLINE := console=/dev/null androidboot.hardware=qcom user_debug=31 loglevel=1 msm_rtb.filter=0x3F kgsl.mmutype=gpummu zcache
-BOARD_KERNEL_BASE := 0x80200000
-BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
-
 #bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
+#TWRP
+DEVICE_RESOLUTION := 540x960
