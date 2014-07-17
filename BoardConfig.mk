@@ -24,15 +24,8 @@
 # inherit from platform common
 -include device/motorola/msm8960-common/BoardConfigCommon.mk
 
-# inherit from the proprietary version
--include vendor/motorola/xt897/BoardConfigVendor.mk
-
 LOCAL_PATH := device/motorola/xt897
 
-#bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
+# kernel
+TARGET_KERNEL_VARIANT_CONFIG := msm8960_mmi_xt897_defconfig
 
-#TWRP
-DEVICE_RESOLUTION := 540x960
-
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 4294967296
